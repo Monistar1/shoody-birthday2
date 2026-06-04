@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رسائل الحب — شهد</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/letters.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="live-background">
+        <div class="stars"></div>
+        <div class="clouds"></div>
+        <div class="lilac-container" id="lilacContainer"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <div class="page-container">
+        <a href="gift.html" class="nav-back">← رجوع</a>
+        
+        <div class="letters-page">
+            <h1 class="page-title">💌 رسائل من القلب</h1>
+            
+            <!-- الأظرف -->
+            <div class="envelopes-grid" id="envelopesGrid">
+                <div class="envelope" data-letter="0">
+                    <div class="envelope-body">
+                        <div class="envelope-pattern">💜</div>
+                        <div class="envelope-seal">
+                            <div class="wax-seal" id="seal0">
+                                <div class="seal-heart">🪻</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="envelope-label">رسالة الأولى</div>
+                </div>
+                
+                <div class="envelope" data-letter="1">
+                    <div class="envelope-body">
+                        <div class="envelope-pattern">💕</div>
+                        <div class="envelope-seal">
+                            <div class="wax-seal" id="seal1">
+                                <div class="seal-heart">💖</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="envelope-label">رسالة الحب</div>
+                </div>
+                
+                <div class="envelope" data-letter="2">
+                    <div class="envelope-body">
+                        <div class="envelope-pattern">✨</div>
+                        <div class="envelope-seal">
+                            <div class="wax-seal" id="seal2">
+                                <div class="seal-heart">💗</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="envelope-label">رسالة الوفاء</div>
+                </div>
+                
+                <div class="envelope" data-letter="3">
+                    <div class="envelope-body">
+                        <div class="envelope-pattern">🌙</div>
+                        <div class="envelope-seal">
+                            <div class="wax-seal" id="seal3">
+                                <div class="seal-heart">💜</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="envelope-label">رسالة الأبد</div>
+                </div>
+            </div>
+
+            <!-- محتوى الرسالة -->
+            <div class="letter-view" id="letterView">
+                <div class="letter-paper-open">
+                    <div class="paper-header">
+                        <div class="paper-stamp">🪻</div>
+                        <div class="paper-date" id="paperDate"></div>
+                    </div>
+                    <div class="paper-content" id="paperContent"></div>
+                    <div class="paper-footer">
+                        <div class="paper-signature" id="paperSignature">— حبيبكِ</div>
+                        <div class="paper-seal-bottom">
+                            <div class="seal-mark">🪻</div>
+                        </div>
+                    </div>
+                    <button class="paper-close" id="paperClose">✨ إغلاق</button>
+                </div>
+            </div>
+        </div>
+
+        <a href="music.html" class="nav-next">التالي →</a>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/letters.js"></script>
+</body>
+</html>

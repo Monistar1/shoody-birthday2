@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بالونات الحب — شهد</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/balloons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="live-background">
+        <div class="stars"></div>
+        <div class="clouds"></div>
+        <div class="lilac-container" id="lilacContainer"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <div class="page-container">
+        <a href="gallery.html" class="nav-back">← رجوع</a>
+        
+        <div class="balloons-page">
+            <h1 class="page-title">🎈 اضغط على البالونات!</h1>
+            
+            <!-- سماء البالونات -->
+            <div class="balloons-sky" id="balloonsSky">
+                <!-- البالونات تُنشأ ديناميكياً -->
+            </div>
+
+            <!-- اسم شهد في النجوم -->
+            <div class="name-stars" id="nameStars">
+                <div class="star-letter" data-letter="ش">ش</div>
+                <div class="star-letter" data-letter="ه">ه</div>
+                <div class="star-letter" data-letter="د">د</div>
+            </div>
+
+            <!-- رسائل الطفو -->
+            <div class="floating-messages" id="floatingMessages"></div>
+
+            <!-- عداد البالونات -->
+            <div class="balloon-counter">
+                <div class="counter-icon">🎈</div>
+                <div class="counter-info">
+                    <span class="counter-label">بالونات منفجرة</span>
+                    <span class="counter-value" id="balloonCount">0</span>
+                </div>
+            </div>
+        </div>
+
+        <a href="fireworks.html" class="nav-next">التالي →</a>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/balloons.js"></script>
+</body>
+</html>

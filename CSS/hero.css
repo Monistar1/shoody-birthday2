@@ -1,0 +1,320 @@
+/* ===== صفحة الهيرو ===== */
+.hero-page {
+    min-height: 100vh;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+/* ===== القلب النابض الكبير ===== */
+.hero-heart-section {
+    text-align: center;
+}
+
+.hero-heart-wrapper {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+}
+
+.hero-heart {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, var(--lilac-main), var(--lilac-dark));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 40px rgba(200,162,200,0.6);
+    animation: heroHeartbeat 1.5s ease-in-out infinite;
+}
+
+.hero-heart:hover {
+    transform: translate(-50%, -50%) rotate(-45deg) scale(1.2);
+    box-shadow: 0 0 60px rgba(200,162,200,0.9), 0 0 100px rgba(155,89,182,0.4);
+}
+
+.hero-heart::before,
+.hero-heart::after {
+    content: '';
+    width: 150px;
+    height: 150px;
+    background: inherit;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.hero-heart::before { top: -75px; left: 0; }
+.hero-heart::after { top: 0; left: 75px; }
+
+@keyframes heroHeartbeat {
+    0%, 100% { transform: translate(-50%, -50%) rotate(-45deg) scale(1); }
+    15% { transform: translate(-50%, -50%) rotate(-45deg) scale(1.1); }
+    30% { transform: translate(-50%, -50%) rotate(-45deg) scale(1); }
+    45% { transform: translate(-50%, -50%) rotate(-45deg) scale(1.15); }
+    60% { transform: translate(-50%, -50%) rotate(-45deg) scale(1); }
+}
+
+.heart-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    z-index: 10;
+    text-align: center;
+}
+
+.heart-text {
+    font-family: 'Amiri', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
+    text-shadow: 0 0 20px rgba(255,255,255,0.8);
+}
+
+.heart-rings {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid rgba(200,162,200,0.3);
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.ring-1 {
+    width: 200px;
+    height: 200px;
+    animation: ringPulse 2s ease-out infinite;
+}
+
+.ring-2 {
+    width: 250px;
+    height: 250px;
+    animation: ringPulse 2s ease-out infinite 0.5s;
+}
+
+.ring-3 {
+    width: 300px;
+    height: 300px;
+    animation: ringPulse 2s ease-out infinite 1s;
+}
+
+@keyframes ringPulse {
+    0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.6; }
+    100% { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
+}
+
+.heart-caption {
+    font-size: 0.9rem;
+    color: var(--lilac-main);
+    opacity: 0.7;
+}
+
+/* ===== الكتابة التلقائية ===== */
+.typewriter-section {
+    max-width: 600px;
+    width: 100%;
+}
+
+.typewriter-box {
+    background: rgba(200,162,200,0.1);
+    border: 1px solid rgba(200,162,200,0.3);
+    border-radius: 20px;
+    padding: 30px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+.typewriter-line {
+    font-family: 'Amiri', serif;
+    font-size: 1.4rem;
+    color: var(--lilac-light);
+    line-height: 1.8;
+    text-align: center;
+}
+
+.typewriter-cursor {
+    font-size: 1.4rem;
+    color: var(--lilac-main);
+    animation: cursorBlink 0.8s infinite;
+    margin-right: 5px;
+}
+
+@keyframes cursorBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* ===== إطار القلب ===== */
+.heart-frame-section {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.heart-frame {
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(135deg, var(--lilac-dark), var(--lilac-deep));
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: 0 0 30px rgba(155,89,182,0.5);
+    animation: frameFloat 4s ease-in-out infinite;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.heart-frame::before,
+.heart-frame::after {
+    content: '';
+    width: 250px;
+    height: 250px;
+    background: inherit;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart-frame::before { top: -125px; left: 0; }
+.heart-frame::after { top: 0; left: 125px; }
+
+@keyframes frameFloat {
+    0%, 100% { transform: rotate(-45deg) translateY(0); }
+    50% { transform: rotate(-45deg) translateY(-15px); }
+}
+
+.frame-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 200px;
+    height: 200px;
+    background: rgba(10,10,26,0.8);
+    border-radius: 15px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.photo-placeholder {
+    text-align: center;
+}
+
+.photo-text {
+    font-size: 1rem;
+    color: var(--lilac-main);
+}
+
+.frame-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(200,162,200,0.2), transparent);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* ===== زمن التعرف ===== */
+.time-together-section {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+.time-title {
+    font-family: 'Amiri', serif;
+    font-size: 1.8rem;
+    color: var(--lilac-light);
+    margin-bottom: 25px;
+    text-shadow: 0 0 20px rgba(200,162,200,0.4);
+}
+
+.time-counters {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.time-unit {
+    background: rgba(200,162,200,0.1);
+    border: 1px solid rgba(200,162,200,0.2);
+    border-radius: 15px;
+    padding: 20px 10px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+}
+
+.time-unit:hover {
+    transform: translateY(-5px);
+    border-color: rgba(200,162,200,0.5);
+    box-shadow: 0 10px 25px rgba(200,162,200,0.2);
+}
+
+.time-value {
+    display: block;
+    font-family: 'Cairo', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--lilac-light);
+    text-shadow: 0 0 15px rgba(200,162,200,0.6);
+}
+
+.time-label {
+    font-size: 0.85rem;
+    color: var(--lilac-main);
+    margin-top: 5px;
+    display: block;
+}
+
+.time-message {
+    font-family: 'Amiri', serif;
+    font-size: 1.2rem;
+    color: var(--lilac-main);
+    margin-top: 15px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards 2s;
+}
+
+/* ===== متجاوب ===== */
+@media (max-width: 768px) {
+    .hero-heart-wrapper {
+        transform: scale(0.8);
+    }
+    
+    .heart-frame-section {
+        transform: scale(0.8);
+    }
+    
+    .time-counters {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .typewriter-line {
+        font-size: 1.1rem;
+    }
+}

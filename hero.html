@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ملكتي — شهد</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="live-background">
+        <div class="stars"></div>
+        <div class="clouds"></div>
+        <div class="lilac-container" id="lilacContainer"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <div class="page-container">
+        <a href="countdown.html" class="nav-back">← رجوع</a>
+        
+        <div class="hero-page">
+            <!-- قلب نابض كبير -->
+            <div class="hero-heart-section">
+                <div class="hero-heart-wrapper">
+                    <div class="hero-heart" id="heroHeart">
+                        <div class="heart-inner">
+                            <span class="heart-text">شهد</span>
+                        </div>
+                    </div>
+                    <div class="heart-rings">
+                        <div class="ring ring-1"></div>
+                        <div class="ring ring-2"></div>
+                        <div class="ring ring-3"></div>
+                    </div>
+                </div>
+                <p class="heart-caption">ضع المؤشر على القلب 💜</p>
+            </div>
+
+            <!-- رسالة تكتب نفسها -->
+            <div class="typewriter-section">
+                <div class="typewriter-box">
+                    <p class="typewriter-line" id="heroTypewriter"></p>
+                    <div class="typewriter-cursor">|</div>
+                </div>
+            </div>
+
+            <!-- إطار القلب -->
+            <div class="heart-frame-section">
+                <div class="heart-frame" id="heartFrame">
+                    <div class="frame-inner">
+                        <div class="photo-placeholder">
+                            <span class="photo-text">📸 ضع صورة شهد هنا</span>
+                        </div>
+                    </div>
+                    <div class="frame-glow"></div>
+                </div>
+                <div class="frame-particles" id="frameParticles"></div>
+            </div>
+
+            <!-- زمن التعرف -->
+            <div class="time-together-section">
+                <h3 class="time-title">⏰ منذ أن عرفتُكِ</h3>
+                <div class="time-counters">
+                    <div class="time-unit">
+                        <span class="time-value" id="togetherDays">0</span>
+                        <span class="time-label">يوم</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-value" id="togetherHours">0</span>
+                        <span class="time-label">ساعة</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-value" id="togetherMinutes">0</span>
+                        <span class="time-label">دقيقة</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-value" id="togetherSeconds">0</span>
+                        <span class="time-label">ثانية</span>
+                    </div>
+                </div>
+                <div class="time-message" id="timeMessage">
+                    وكل ثانية تزيد حُبّي لكِ 💜
+                </div>
+            </div>
+        </div>
+
+        <a href="cake.html" class="nav-next">التالي →</a>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/hero.js"></script>
+</body>
+</html>

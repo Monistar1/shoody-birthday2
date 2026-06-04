@@ -1,0 +1,454 @@
+/* ===== صفحة العد التنازلي ===== */
+.countdown-page {
+    min-height: 100vh;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.page-title {
+    font-family: 'Amiri', serif;
+    font-size: 2.5rem;
+    color: var(--lilac-light);
+    text-shadow: 0 0 30px rgba(200,162,200,0.5);
+    margin-bottom: 20px;
+}
+
+/* ===== ساعة رملية ===== */
+.hourglass-container {
+    position: relative;
+    width: 120px;
+    height: 180px;
+    margin: 20px 0;
+}
+
+.hourglass {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 20px rgba(200,162,200,0.4));
+}
+
+.hourglass-top,
+.hourglass-bottom {
+    width: 100px;
+    height: 70px;
+    background: rgba(200,162,200,0.15);
+    border: 2px solid rgba(200,162,200,0.5);
+    position: absolute;
+    left: 10px;
+    overflow: hidden;
+}
+
+.hourglass-top {
+    top: 0;
+    border-radius: 50px 50px 10px 10px;
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+}
+
+.hourglass-bottom {
+    bottom: 0;
+    border-radius: 10px 10px 50px 50px;
+    clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+}
+
+.hourglass-neck {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 20px;
+    background: rgba(200,162,200,0.3);
+    border-radius: 50%;
+}
+
+.sand-top,
+.sand-bottom {
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(180deg, var(--lilac-main), var(--lilac-dark));
+    transition: height 1s linear;
+}
+
+.sand-top {
+    bottom: 0;
+    height: 80%;
+    animation: sandDrain 60s linear infinite;
+}
+
+.sand-bottom {
+    bottom: 0;
+    height: 20%;
+    animation: sandFill 60s linear infinite;
+}
+
+.sand-stream {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 0;
+    background: linear-gradient(180deg, var(--lilac-main), var(--lilac-dark));
+    animation: streamFlow 60s linear infinite;
+}
+
+@keyframes sandDrain {
+    0% { height: 80%; }
+    100% { height: 0%; }
+}
+
+@keyframes sandFill {
+    0% { height: 20%; }
+    100% { height: 100%; }
+}
+
+@keyframes streamFlow {
+    0% { height: 0; opacity: 0; }
+    10% { height: 40px; opacity: 1; }
+    90% { height: 40px; opacity: 1; }
+    100% { height: 0; opacity: 0; }
+}
+
+.hourglass-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 200px;
+    background: radial-gradient(ellipse, rgba(200,162,200,0.2), transparent);
+    border-radius: 50%;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+/* ===== العدادات ===== */
+.counters-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.counter-box {
+    background: rgba(200,162,200,0.1);
+    border: 1px solid rgba(200,162,200,0.3);
+    border-radius: 20px;
+    padding: 25px 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.counter-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(200,162,200,0.3);
+    border-color: rgba(200,162,200,0.6);
+}
+
+.counter-number {
+    font-family: 'Cairo', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--lilac-light);
+    text-shadow: 0 0 15px rgba(200,162,200,0.6);
+    line-height: 1;
+}
+
+.counter-label {
+    font-size: 0.9rem;
+    color: var(--lilac-main);
+    margin-top: 8px;
+}
+
+.counter-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(200,162,200,0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.counter-box:hover .counter-glow {
+    opacity: 1;
+}
+
+/* ===== الرسالة اليومية ===== */
+.daily-message {
+    background: rgba(200,162,200,0.1);
+    border: 1px solid rgba(200,162,200,0.3);
+    border-radius: 20px;
+    padding: 25px 30px;
+    max-width: 500px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1s ease-out;
+}
+
+.message-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.message-text {
+    font-family: 'Amiri', serif;
+    font-size: 1.2rem;
+    color: var(--lilac-light);
+    line-height: 1.8;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ===== صندوق الأمنيات ===== */
+.wishes-section {
+    width: 100%;
+    max-width: 600px;
+}
+
+.section-title {
+    font-family: 'Amiri', serif;
+    font-size: 1.5rem;
+    color: var(--lilac-light);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.wishes-box {
+    background: rgba(200,162,200,0.08);
+    border: 1px solid rgba(200,162,200,0.2);
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.wishes-list {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    padding-right: 10px;
+}
+
+.wishes-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.wishes-list::-webkit-scrollbar-thumb {
+    background: rgba(200,162,200,0.4);
+    border-radius: 3px;
+}
+
+.wish-item {
+    background: rgba(200,162,200,0.15);
+    border-radius: 15px;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: var(--white);
+    border-right: 3px solid var(--lilac-main);
+    animation: slideIn 0.5s ease-out;
+    position: relative;
+}
+
+.wish-item::before {
+    content: '🌸';
+    margin-left: 8px;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.wish-input-area {
+    display: flex;
+    gap: 10px;
+}
+
+.wish-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid rgba(200,162,200,0.3);
+    border-radius: 15px;
+    background: rgba(200,162,200,0.1);
+    color: var(--white);
+    font-family: 'Cairo', sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.wish-input:focus {
+    border-color: var(--lilac-main);
+    box-shadow: 0 0 15px rgba(200,162,200,0.2);
+}
+
+.wish-input::placeholder {
+    color: rgba(255,255,255,0.4);
+}
+
+.wish-btn {
+    padding: 12px 25px;
+    background: linear-gradient(135deg, var(--lilac-dark), var(--lilac-deep));
+    border: none;
+    border-radius: 15px;
+    color: var(--white);
+    font-family: 'Cairo', sans-serif;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.wish-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(155,89,182,0.4);
+}
+
+/* ===== عداد التفكير ===== */
+.thought-counter {
+    background: rgba(200,162,200,0.1);
+    border: 1px solid rgba(200,162,200,0.3);
+    border-radius: 20px;
+    padding: 25px 30px;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.thought-icon {
+    font-size: 2.5rem;
+    animation: think 3s ease-in-out infinite;
+}
+
+@keyframes think {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.thought-content {
+    flex: 1;
+}
+
+.thought-label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--lilac-main);
+    margin-bottom: 5px;
+}
+
+.thought-number {
+    font-family: 'Cairo', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--lilac-light);
+    text-shadow: 0 0 15px rgba(200,162,200,0.6);
+}
+
+.thought-unit {
+    font-size: 0.9rem;
+    color: var(--lilac-main);
+    margin-right: 5px;
+}
+
+.thought-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(200,162,200,0.2);
+    border-radius: 0 0 20px 20px;
+}
+
+.thought-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--lilac-main), var(--lilac-light));
+    border-radius: 0 0 20px 20px;
+    transition: width 0.5s ease;
+}
+
+/* ===== التنقل ===== */
+.nav-back,
+.nav-next {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 15px 20px;
+    background: rgba(200,162,200,0.15);
+    border: 1px solid rgba(200,162,200,0.3);
+    border-radius: 15px;
+    color: var(--lilac-light);
+    text-decoration: none;
+    font-size: 1rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+    z-index: 100;
+}
+
+.nav-back {
+    left: 20px;
+}
+
+.nav-next {
+    right: 20px;
+}
+
+.nav-back:hover,
+.nav-next:hover {
+    background: rgba(200,162,200,0.3);
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 5px 20px rgba(200,162,200,0.3);
+}
+
+.page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+/* ===== متجاوب ===== */
+@media (max-width: 768px) {
+    .counters-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .counter-number {
+        font-size: 1.8rem;
+    }
+    
+    .nav-back,
+    .nav-next {
+        position: static;
+        display: inline-block;
+        margin: 20px;
+        transform: none;
+    }
+    
+    .nav-back:hover,
+    .nav-next:hover {
+        transform: scale(1.05);
+    }
+    
+    .hourglass-container {
+        transform: scale(0.8);
+    }
+}

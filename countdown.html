@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>العد التنازلي — شهد</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/countdown.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="live-background">
+        <div class="stars"></div>
+        <div class="clouds"></div>
+        <div class="lilac-container" id="lilacContainer"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <div class="page-container">
+        <a href="index.html" class="nav-back">← رجوع</a>
+        
+        <div class="countdown-page">
+            <h1 class="page-title">⏳ باقي على يوم ملكتي</h1>
+            
+            <!-- ساعة رملية -->
+            <div class="hourglass-container">
+                <div class="hourglass">
+                    <div class="hourglass-top">
+                        <div class="sand-top" id="sandTop"></div>
+                    </div>
+                    <div class="hourglass-neck"></div>
+                    <div class="hourglass-bottom">
+                        <div class="sand-bottom" id="sandBottom"></div>
+                    </div>
+                    <div class="sand-stream" id="sandStream"></div>
+                </div>
+                <div class="hourglass-glow"></div>
+            </div>
+
+            <!-- العدادات -->
+            <div class="counters-grid">
+                <div class="counter-box">
+                    <div class="counter-number" id="days">00</div>
+                    <div class="counter-label">يوم</div>
+                    <div class="counter-glow"></div>
+                </div>
+                <div class="counter-box">
+                    <div class="counter-number" id="hours">00</div>
+                    <div class="counter-label">ساعة</div>
+                </div>
+                <div class="counter-box">
+                    <div class="counter-number" id="minutes">00</div>
+                    <div class="counter-label">دقيقة</div>
+                </div>
+                <div class="counter-box">
+                    <div class="counter-number" id="seconds">00</div>
+                    <div class="counter-label">ثانية</div>
+                </div>
+            </div>
+
+            <!-- رسالة يومية -->
+            <div class="daily-message" id="dailyMessage">
+                <div class="message-icon">💌</div>
+                <p class="message-text" id="messageText"></p>
+            </div>
+
+            <!-- صندوق الأمنيات -->
+            <div class="wishes-section">
+                <h3 class="section-title">✨ صندوق رسائل شهد</h3>
+                <div class="wishes-box" id="wishesBox">
+                    <div class="wishes-list" id="wishesList"></div>
+                    <div class="wish-input-area">
+                        <input type="text" class="wish-input" id="wishInput" placeholder="اكتب رسالة لشهد..." maxlength="100">
+                        <button class="wish-btn" id="wishBtn">🌟 أرسل</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- عداد التفكير -->
+            <div class="thought-counter">
+                <div class="thought-icon">💭</div>
+                <div class="thought-content">
+                    <span class="thought-label">فكرت فيكِ اليوم</span>
+                    <span class="thought-number" id="thoughtCount">0</span>
+                    <span class="thought-unit">مرة</span>
+                </div>
+                <div class="thought-bar">
+                    <div class="thought-fill" id="thoughtFill"></div>
+                </div>
+            </div>
+        </div>
+
+        <a href="hero.html" class="nav-next">التالي →</a>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/countdown.js"></script>
+</body>
+</html>

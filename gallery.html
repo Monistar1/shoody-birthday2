@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ذكرياتنا — شهد</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="live-background">
+        <div class="stars"></div>
+        <div class="clouds"></div>
+        <div class="lilac-container" id="lilacContainer"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <div class="page-container">
+        <a href="cake.html" class="nav-back">← رجوع</a>
+        
+        <div class="gallery-page">
+            <h1 class="page-title">📸 ذكرياتنا الجميلة</h1>
+            
+            <!-- فيلم تلقائي -->
+            <div class="film-section">
+                <div class="film-frame" id="filmFrame">
+                    <div class="film-photo" id="filmPhoto">
+                        <div class="photo-placeholder film-placeholder">
+                            <span>🎬 اضغط لتشغيل الفيلم</span>
+                        </div>
+                    </div>
+                    <div class="film-overlay">
+                        <div class="film-play" id="filmPlay">▶️</div>
+                        <div class="film-progress" id="filmProgress"></div>
+                    </div>
+                    <div class="film-vintage" id="filmVintage"></div>
+                </div>
+                <div class="film-controls">
+                    <button class="film-btn" id="playBtn">▶️ تشغيل</button>
+                    <button class="film-btn" id="pauseBtn">⏸️ إيقاف</button>
+                    <div class="film-status" id="filmStatus">جاهز للعرض</div>
+                </div>
+            </div>
+
+            <!-- معرض الصور -->
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- الصور تُضاف ديناميكياً -->
+                <div class="gallery-item" data-story="أول لقاء - المكان: ... التاريخ: ...">
+                    <div class="item-photo">
+                        <span class="item-icon">📷</span>
+                        <span class="item-text">أضف صورة هنا</span>
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">📅 التاريخ</div>
+                        <div class="item-place">📍 المكان</div>
+                        <div class="item-memory">💭 الذكرى</div>
+                    </div>
+                </div>
+                <!-- نسخ المزيد -->
+                <div class="gallery-item" data-story="رحلة معاً - أجمل أيام العمر">
+                    <div class="item-photo">
+                        <span class="item-icon">📷</span>
+                        <span class="item-text">أضف صورة هنا</span>
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">📅 التاريخ</div>
+                        <div class="item-place">📍 المكان</div>
+                        <div class="item-memory">💭 الذكرى</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-story="يوم لا يُنسى - ضحكنا كثيراً">
+                    <div class="item-photo">
+                        <span class="item-icon">📷</span>
+                        <span class="item-text">أضف صورة هنا</span>
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">📅 التاريخ</div>
+                        <div class="item-place">📍 المكان</div>
+                        <div class="item-memory">💭 الذكرى</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-story="لحظة سعيدة - القلب يدق بقوة">
+                    <div class="item-photo">
+                        <span class="item-icon">📷</span>
+                        <span class="item-text">أضف صورة هنا</span>
+                    </div>
+                    <div class="item-overlay">
+                        <div class="item-date">📅 التاريخ</div>
+                        <div class="item-place">📍 المكان</div>
+                        <div class="item-memory">💭 الذكرى</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- مقارنة قبل/بعد -->
+            <div class="compare-section">
+                <h3 class="section-title">⏳ قبل وبعد</h3>
+                <div class="compare-slider" id="compareSlider">
+                    <div class="compare-before">
+                        <div class="compare-photo">
+                            <span>📷 قبل</span>
+                        </div>
+                    </div>
+                    <div class="compare-after">
+                        <div class="compare-photo">
+                            <span>📷 بعد</span>
+                        </div>
+                    </div>
+                    <div class="compare-handle" id="compareHandle">
+                        <div class="handle-line"></div>
+                        <div class="handle-circle">↔️</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="balloons.html" class="nav-next">التالي →</a>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موسيقانا — شهد</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/music.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="live-background">
+        <div class="stars"></div>
+        <div class="clouds"></div>
+        <div class="lilac-container" id="lilacContainer"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <div class="page-container">
+        <a href="letters.html" class="nav-back">← رجوع</a>
+        
+        <div class="music-page">
+            <h1 class="page-title">🎵 أغنيتنا</h1>
+            
+            <!-- قرص الفينيل -->
+            <div class="vinyl-section">
+                <div class="vinyl-player" id="vinylPlayer">
+                    <div class="vinyl-record" id="vinylRecord">
+                        <div class="record-grooves"></div>
+                        <div class="record-label">
+                            <div class="label-text">شهد</div>
+                            <div class="label-sub">❤️ أغنية حياتي</div>
+                        </div>
+                        <div class="record-hole"></div>
+                    </div>
+                    <div class="tonearm" id="tonearm">
+                        <div class="tonearm-base"></div>
+                        <div class="tonearm-stick"></div>
+                        <div class="tonearm-head"></div>
+                    </div>
+                </div>
+                
+                <!-- موجات الصوت -->
+                <div class="sound-waves" id="soundWaves">
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                </div>
+            </div>
+
+            <!-- أزرار التحكم -->
+            <div class="music-controls">
+                <button class="music-btn" id="playMusicBtn">▶️ تشغيل</button>
+                <button class="music-btn" id="pauseMusicBtn">⏸️ إيقاف</button>
+                <div class="volume-control">
+                    <span class="volume-icon">🔊</span>
+                    <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="50">
+                </div>
+            </div>
+
+            <!-- كلمات الأغنية -->
+            <div class="lyrics-section" id="lyricsSection">
+                <div class="lyrics-box">
+                    <div class="lyrics-text" id="lyricsText">
+                        <p class="lyric-line active">🎵 اضغط تشغيل لبدء الأغنية</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- زر الرقص -->
+            <div class="dance-section">
+                <button class="dance-btn" id="danceBtn">
+                    <span class="dance-icon">💃</span>
+                    <span class="dance-text">رقص معي</span>
+                </button>
+                <div class="camera-preview" id="cameraPreview">
+                    <div class="camera-placeholder">
+                        <span>📷 الكاميرا ستظهر هنا</span>
+                        <span class="camera-sub">(يتطلب إذن الكاميرا)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="footer.html" class="nav-next">التالي →</a>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/music.js"></script>
+</body>
+</html>

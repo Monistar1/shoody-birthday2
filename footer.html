@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إلى الأبد — شهد</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="live-background">
+        <div class="stars"></div>
+        <div class="clouds"></div>
+        <div class="lilac-container" id="lilacContainer"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <div class="page-container">
+        <a href="music.html" class="nav-back">← رجوع</a>
+        
+        <div class="footer-page">
+            <!-- عداد أيام الحب -->
+            <div class="love-counter-section">
+                <h2 class="section-title">⏳ أيام حبنا</h2>
+                <div class="love-counter" id="loveCounter">
+                    <div class="counter-digit" id="counterDays">0</div>
+                    <div class="counter-unit">يوم من الحب</div>
+                </div>
+                <div class="counter-hearts" id="counterHearts"></div>
+            </div>
+
+            <!-- رسالة متغيرة -->
+            <div class="quote-section">
+                <div class="quote-box" id="quoteBox">
+                    <div class="quote-icon">💜</div>
+                    <p class="quote-text" id="quoteText"></p>
+                    <div class="quote-author" id="quoteAuthor">— لكِ</div>
+                </div>
+            </div>
+
+            <!-- زر القبلة -->
+            <div class="kiss-section">
+                <button class="kiss-btn" id="kissBtn">
+                    <span class="kiss-icon">💋</span>
+                    <span class="kiss-text">أرسل قبلة</span>
+                </button>
+                <div class="flying-kisses" id="flyingKisses"></div>
+            </div>
+
+            <!-- التوقيع الرقمي -->
+            <div class="signature-section">
+                <div class="digital-signature" id="digitalSignature">
+                    <div class="signature-line">بكل حبٍ ووفاء</div>
+                    <div class="signature-name">إلى شهد</div>
+                    <div class="signature-date" id="signatureDate"></div>
+                    <div class="signature-stamp">
+                        <div class="stamp-circle">
+                            <span class="stamp-heart">🪻</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- روابط الصفحات -->
+            <div class="pages-nav">
+                <h3 class="nav-title">📍 صفحات الموقع</h3>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">🏠 البداية</a>
+                    <a href="countdown.html" class="nav-link">⏳ العد التنازلي</a>
+                    <a href="hero.html" class="nav-link">💕 الهيرو</a>
+                    <a href="cake.html" class="nav-link">🎂 الكيكة</a>
+                    <a href="gallery.html" class="nav-link">📸 الذكريات</a>
+                    <a href="balloons.html" class="nav-link">🎈 البالونات</a>
+                    <a href="fireworks.html" class="nav-link">🎆 الألعاب النارية</a>
+                    <a href="gift.html" class="nav-link">🎁 الهدية</a>
+                    <a href="letters.html" class="nav-link">💌 الرسائل</a>
+                    <a href="music.html" class="nav-link">🎵 الموسيقى</a>
+                </div>
+            </div>
+
+            <!-- إعادة التشغيل -->
+            <div class="restart-section">
+                <button class="restart-btn" id="restartBtn">
+                    <span>🔄 ابدأ الرحلة من جديد</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+</html>

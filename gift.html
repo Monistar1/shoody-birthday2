@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هديتي لكِ — شهد</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/gift.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="live-background">
+        <div class="stars"></div>
+        <div class="clouds"></div>
+        <div class="lilac-container" id="lilacContainer"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <div class="page-container">
+        <a href="fireworks.html" class="nav-back">← رجوع</a>
+        
+        <div class="gift-page">
+            <h1 class="page-title">🎁 هدية خاصة</h1>
+            
+            <!-- صندوق الهدية -->
+            <div class="gift-box-container" id="giftBoxContainer">
+                <div class="gift-box" id="giftBox">
+                    <div class="box-body">
+                        <div class="box-pattern"></div>
+                    </div>
+                    <div class="box-lid" id="boxLid">
+                        <div class="lid-bow">
+                            <div class="bow-loop left"></div>
+                            <div class="bow-loop right"></div>
+                            <div class="bow-knot"></div>
+                        </div>
+                    </div>
+                    <div class="box-ribbon vertical"></div>
+                    <div class="box-ribbon horizontal"></div>
+                </div>
+                <div class="gift-shake" id="giftShake">🔔</div>
+            </div>
+
+            <!-- تعليمات -->
+            <div class="gift-instructions" id="giftInstructions">
+                <p class="instruction-text">🖱️ اضغط على الصندوق لفتح الهدية!</p>
+                <p class="instruction-text sub">الصندوق يهتز بشوق 💜</p>
+            </div>
+
+            <!-- محتوى الهدية -->
+            <div class="gift-content" id="giftContent">
+                <!-- الورقة -->
+                <div class="gift-letter" id="giftLetter">
+                    <div class="letter-paper">
+                        <div class="letter-fold"></div>
+                        <div class="letter-text">
+                            <h2 class="letter-title">إلى شهد الحبيبة</h2>
+                            <p class="letter-body">
+                                في هذا اليوم المميز، أهديكِ كل حبي وكل شعوري.<br>
+                                أنتِ أجمل هدية منحتني إياها الحياة،<<br>
+                                وكل يوم معكِ هو عيد بحد ذاته.<br><br>
+                                أعدكِ أن أكون دائماً بجانبكِ،<<br>
+                                في الفرح والحزن، في السراء والضراء.<br><br>
+                                أحبكِ أكثر مما تتخيلين 💜
+                            </p>
+                            <div class="letter-signature">
+                                — من قلب يدق باسمكِ
+                            </div>
+                            <div class="letter-date" id="letterDate"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الصورة السرية -->
+                <div class="secret-photo" id="secretPhoto">
+                    <div class="photo-frame">
+                        <div class="photo-placeholder">
+                            <span>📸 صورة سرية</span>
+                            <span class="photo-sub">(ضع صورتكما هنا)</span>
+                        </div>
+                        <div class="photo-glow"></div>
+                    </div>
+                </div>
+
+                <!-- Confetti -->
+                <div class="gift-confetti" id="giftConfetti"></div>
+            </div>
+        </div>
+
+        <a href="letters.html" class="nav-next">التالي →</a>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/gift.js"></script>
+</body>
+</html>

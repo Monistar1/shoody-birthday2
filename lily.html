@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورد اليلك — شهد</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/lily.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="live-background">
+        <div class="stars"></div>
+        <div class="clouds"></div>
+        <div class="lilac-container" id="lilacContainer"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <div class="page-container">
+        <a href="hero.html" class="nav-back">← رجوع</a>
+        
+        <div class="lily-page">
+            <h1 class="page-title">🌸 حديقة اليلك</h1>
+            
+            <div class="lily-bouquet" id="lilyBouquet"></div>
+
+            <div class="instructions" id="instructions">
+                <p class="instruction-text">🖱️ اضغط على الوردة لتفتحها</p>
+                <p class="instruction-text">✨ اسحب الماوس لرسم حبيبات الورد</p>
+            </div>
+
+            <div class="bloom-counter">
+                <div class="counter-icon">🌸</div>
+                <div class="counter-info">
+                    <span class="counter-label">ورود متفتحة</span>
+                    <span class="counter-value" id="bloomCount">0 / 7</span>
+                </div>
+            </div>
+
+            <div class="secret-message" id="secretMessage">
+                <div class="message-box">
+                    <div class="message-icon">🌸</div>
+                    <h2 class="secret-title">مثل ليلك الحب</h2>
+                    <p class="secret-text">
+                        اليلك الوردي يعني الحب والسعادة<br>
+                        مثلكِ تماماً — جميل، ناعم، مليء بالحياة<br>
+                        كل وردة في هذه الباقة تمثل ذكرى من ذكرياتنا 💗
+                    </p>
+                    <div class="secret-signature">— إلى شهد</div>
+                </div>
+            </div>
+
+            <div class="scent-messages" id="scentMessages"></div>
+        </div>
+
+        <a href="gallery.html" class="nav-next">التالي →</a>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/lily.js"></script>
+</body>
+</html>

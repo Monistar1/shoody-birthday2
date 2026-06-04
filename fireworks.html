@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ألعاب نارية — شهد</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fireworks.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="live-background">
+        <div class="stars"></div>
+        <div class="clouds"></div>
+        <div class="lilac-container" id="lilacContainer"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <div class="page-container">
+        <a href="balloons.html" class="nav-back">← رجوع</a>
+        
+        <div class="fireworks-page">
+            <h1 class="page-title">🎆 ارسم السماء بالحب</h1>
+            
+            <!-- سماء الألعاب النارية -->
+            <canvas class="fireworks-canvas" id="fireworksCanvas"></canvas>
+            
+            <!-- تعليمات -->
+            <div class="fireworks-instructions">
+                <p class="instruction-text">🖱️ اضغط في أي مكان لإطلاق الألعاب النارية</p>
+                <p class="instruction-text">✨ اسحب لرسم الألعاب النارية المتواصلة</p>
+            </div>
+
+            <!-- رسالة من الشرارات -->
+            <div class="spark-message" id="sparkMessage">
+                <div class="spark-text" id="sparkText"></div>
+            </div>
+
+            <!-- ألوان السماء -->
+            <div class="sky-colors" id="skyColors"></div>
+        </div>
+
+        <a href="gift.html" class="nav-next">التالي →</a>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/fireworks.js"></script>
+</body>
+</html>
